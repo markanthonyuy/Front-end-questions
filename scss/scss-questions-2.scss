@@ -1,0 +1,14 @@
+/*
+ * SCSS Question 2.
+ * Links on a web page should be black in color, unless they are inside a <header> element, where they should instead be white.
+ * Fix the SCSS below to enable this.
+ */
+
+body {
+	a {
+		color: black;
+	}
+	header {
+		background: black;
+	}
+}

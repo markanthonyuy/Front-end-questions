@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Q3</title>
+	<style type="text/css">
+		body {
+			font-family: monospace;
+			margin: 0;
+			padding: 30px;
+			font-size: 14px;
+		}
+	</style>
+</head>
+<body>
+
+	<header>
+		<h1 id="title">jQuery excercise</h1>
+	</header>
+
+	<article>
+		<p>Question 3.</p>
+		<p>The getTime() function should make an ajax GET request to "http://date.jsontest.com/", parse the JSON, and return the time.</p>
+		<p>(If your browser gives a cross-origin error, ignore it)</p>
+		<p><strong>The time is: </strong><span id="time">Loading</span></p>
+	</article>
+
+	<footer id="footer">
+
+	</footer>
+
+	<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script>
+
+		/*
+		 * Gets the time from http://date.jsontest.com/, and use the time result in the callback arguments..
+		 */
+		function getTime(callback) {
+
+			var url = "http://date.jsontest.com/", result;
+
+			//Fetch the time here.
+			result = "Fix me";
+			
+			callback(result);			
+
+		}
+
+		$(document).ready(function(){
+
+			var timeEl = $("#time");
+
+			getTime(function(time){
+				//Callback after the time has been fetched.
+				$(timeEl).html( time );
+			});
+
+		});
+
+	</script>
+
+</body>
+</html>
