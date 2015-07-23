@@ -35,6 +35,9 @@
 		function foo() {
 
 			//Change the value of #email to test@test.com
+			var emailStr = 'test@test.com',
+			    emailPlaceholder = document.getElementById('email');
+			emailPlaceholder.innerHTML = emailStr;
 
 		}
 		foo();
