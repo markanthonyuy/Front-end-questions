@@ -39,10 +39,14 @@
 			var url = "http://date.jsontest.com/", result;
 
 			//Fetch the time here.
-			result = "Fix me";
-			
-			callback(result);			
-
+			$.ajax({
+				url: url
+			}).done(function(data) {
+				result = data.time;
+				callback(result);
+			}).fail(function(data) {
+				console.log(data);
+			})			
 		}
 
 		$(document).ready(function(){
