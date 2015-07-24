@@ -12,3 +12,11 @@ body {
 footer {
 	color: white;
 }
+
+@mixin myCoolMixin($selector) {
+  #{$selector} {
+    background-color: blue;
+  }
+  body { background-color: red; }
+  footer { background-color: green; }
+}
